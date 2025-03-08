@@ -224,7 +224,7 @@ p {
 
 .changing-text {
   display: inline-block;
-  animation: fade 4.6s infinite;
+  animation: fade 5s infinite;
   color: #94b7c3;
 }
 
@@ -308,6 +308,10 @@ p {
 
   .mission div:nth-child(2) {
     grid-column: auto;
+  }
+
+  .mission {
+    text-align: center;
   }
 
   .about div:nth-child(1) {

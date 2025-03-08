@@ -1,0 +1,333 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /* background-color: #e3e3e3; */
+  color: #333;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+h2 {
+  padding-bottom: 16px;
+}
+
+p {
+  padding-bottom: 16px;
+}
+
+/* Grid principal */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
+  gap: 32px; /* Espaçamento entre os itens */
+  /* background-color: #e5e5e5; */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 32px; /* Espaçamento desktop */
+}
+
+/* ======================================================= */
+/* Ajuste para o tamanho dos vídeos */
+
+/* Ajuste para garantir que o vídeo ocupe todo o espaço disponível */
+.video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%; /* Ocupa toda a largura da coluna */
+}
+
+.video-container video {
+  display: block;
+  width: 100%; /* O vídeo se ajusta à largura da coluna */
+  max-width: 100%;
+  aspect-ratio: 9 / 16; /* Mantém a proporção do vídeo */
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* ======================================================= */
+/* Ajuste para o tamanho das imagens */
+
+.image-container {
+  width: 100%; /* Ocupa toda a largura da coluna */
+  height: 100%; /* Ocupa toda a altura disponível */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Evita que a imagem extrapole */
+}
+
+.image-container img {
+  width: 100%; /* Ajusta a imagem à largura do container */
+  height: 100%; /* Ajusta a imagem à altura do container */
+  object-fit: cover; /* Garante que a imagem cubra todo o espaço sem distorcer */
+  border-radius: 8px; /* Opcional: bordas arredondadas */
+}
+
+/* ======================================================= */
+/* HERO */
+
+.hero {
+  position: relative;
+  /* padding: 80px 32px; */
+  background: url("assets/background.webp") center bottom / cover no-repeat;
+  background-color: #000; /* Fundo escuro */
+  /* max-height: 500px; */
+  /* display: flex; */
+  /* align-items: flex-end; */
+  /* justify-content: center; */
+}
+
+/* Efeito de escurecimento e remoção das cores da imagem */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  filter: grayscale(100%) brightness(50%);
+}
+
+/* Degradê na parte inferior */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 70%
+  );
+}
+
+.hero div:nth-child(1) {
+  grid-column: span 2;
+  color: #fff;
+  z-index: 1;
+}
+
+.hero div:nth-child(2) {
+  z-index: 1;
+}
+
+
+
+.hero .text-container span {
+  display: block;
+  text-align: left;
+}
+
+.hero .text-container {
+  font-size: 60px;
+}
+
+.hero-text1 {
+  font-size: 1em;
+  font-weight: 900;
+  margin-bottom: -40px;
+}
+
+.hero-text2 {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+.hero-text3 {
+  font-size: 28px;
+}
+
+/* ======================================================= */
+/* MISSÃO */
+.mission div:nth-child(2) {
+  grid-column: span 2;
+}
+
+.mission .text-box {
+  text-align: center;
+  display: block; /* Cada item ocupa uma linha */
+  background-color: #94b7c3;
+  padding: 12px 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px; /* Espaçamento entre as caixas de texto */
+}
+
+/* ======================================================= */
+/* SOBRE */
+.about {
+  background-color: #94b7c3;
+}
+
+.about div:nth-child(1) {
+  grid-column: span 2;
+}
+
+/* ======================================================= */
+/* TREINAMENTOS */
+.training div:nth-child(2) {
+  grid-column: span 2;
+}
+
+/* ======================================================= */
+/* MENTORIAS */
+
+.mentoring {
+  background-color: #282828;
+}
+
+.mentoring h2 {
+  color: #ffffff;
+}
+
+.mentoring div:nth-child(1) {
+  grid-column: span 3;
+  text-align: center;
+}
+
+/* ======================================================= */
+/* WORKSHOP */
+
+.workshop div:nth-child(1) {
+  grid-column: span 2;
+}
+
+/* ======================================================= */
+/* FRASE ANIMADA */
+
+/* Animação do texto */
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.changing-text {
+  display: inline-block;
+  animation: fade 4.6s infinite;
+  color: #94b7c3;
+}
+
+.quote {
+  background-color: #282828;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 45px;
+}
+
+.quote div:nth-child(1) {
+  grid-column: span 3;
+}
+
+/* ======================================================= */
+/* CONTATO */
+
+.contact {
+  background-color: #94b7c3;
+  text-align: center;
+}
+
+.contact div:nth-child(1) {
+  grid-column: span 3;
+}
+
+/* Estilo do botão WhatsApp */
+.whatsapp-btn {
+  display: inline-block;
+  background-color: #25d366;
+  color: white;
+  padding: 12px 24px;
+  margin-top: 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128c7e;
+}
+
+/* ======================================================= */
+/* Estilos para responsividade mobile */
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    padding: 80px 16px;
+  }
+
+  /* Inverte a ordem no mobile */
+  .grid-container.reverse-mobile {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .hero .text-container span {
+    text-align: center;
+  }
+
+  .hero .text-container {
+    font-size: 50px;
+  }
+
+  .hero div:nth-child(1) {
+    grid-column: auto;
+  }
+
+  .mission div:nth-child(2) {
+    grid-column: auto;
+  }
+
+  .about div:nth-child(1) {
+    grid-column: auto;
+  }
+
+  .training div:nth-child(2) {
+    grid-column: auto;
+  }
+
+  .mentoring div:nth-child(1) {
+    grid-column: auto;
+    text-align: left;
+  }
+
+  .workshop div:nth-child(1) {
+    grid-column: auto;
+  }
+
+  .quote div:nth-child(1) {
+    grid-column: auto;
+  }
+
+  .contact div:nth-child(2) {
+    grid-column: auto;
+    text-align: center;
+  }
+}

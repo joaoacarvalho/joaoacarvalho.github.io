@@ -1,12 +1,185 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Teste</title>
-</head>
-<body>
-    <h1>Essa é a página de teste!</h1>
-    <a href="../index.html">Voltar para a página inicial</a>
-</body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desenvolvimento Humano - Elen Flávia</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="hero">
+      <div class="grid-container reverse-mobile">
+        <div class="text-container">
+          <span class="hero-text1">Desenvolvimento</span>
+          <span class="hero-text2">HUMANO</span>
+          <span class="hero-text3">Elen Flávia</span>
+        </div>
+        <div class="image-container">
+          <img
+            src="assets/elen_capa.png"
+            alt="Elen Flávia"
+            class="hero-image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção sobre a missão -->
+    <section class="mission">
+      <div class="grid-container reverse-mobile">
+        <div class="video-container">
+          <video src="assets/treinamento 03.mov" controls></video>
+        </div>
+        <div class="text-container">
+          <h2>Minha missão é:</h2>
+          <p class="text-box">Ensinar</p>
+          <p class="text-box">Contribuir</p>
+          <p class="text-box">Inspirar</p>
+          <p class="text-box">Desenvolver</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção sobre -->
+    <section class="about">
+      <div class="grid-container">
+        <div class="text-container">
+          <h2>Sobre mim</h2>
+          <p>
+            Sou formada em Desenvolvimento Humano, master em PNL, Pós-graduada
+            em Psicologia Positiva e Pós-graduando Liderança e Coaching.
+            Acredito que o conhecimento e a comunicação são ferramentas
+            poderosas para transformar vidas. Minha missão é contribuir,
+            inspirar e ajudar pessoas a potencializarem o melhor de si e seus
+            resultado.
+          </p>
+        </div>
+        <div class="image-container">
+          <img src="assets/ElenFlavia.jpg" alt="Elen Flávia" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção feedback do treinamentos -->
+    <section class="training">
+      <div class="grid-container reverse-mobile">
+        <div class="video-container">
+          <video src="assets/treinamentos 01.mov" controls></video>
+        </div>
+        <div class="text-container">
+          <h2>Treinamentos e Palestras</h2>
+          <p>
+            Desde 2019 meu compromisso é desenvolver, capacitar pessoas e
+            equipes a despertarem o melhor de si. Ajudo a fortalecer a
+            confiança, o engajamento, o propósito de vida e o bem-estar.
+          </p>
+          <p>
+            Com conteudos práticos e inspiradores, trabalhamos o
+            autoconhecimento, a inteligência emocional, a comunicação eficaz e a
+            mudança de mentalidade, impulsionando o crescimento pessoal e
+            profissional. O resultado? Mais satisfação, melhores desempenhos e
+            uma vida com mais significado!
+          </p>
+          <p>
+            Seja para empresas, equipes ou individual, meu compromisso é ajudar
+            você a desenvolver habilidades essenciais para atingir seus
+            objetivos e transformar desafios em oportunidades. Vamos juntos
+            nessa jornada de evolução.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção feedback do mentorias -->
+    <section class="mentoring">
+      <div class="grid-container">
+        <div class="text-container">
+          <h2>Mentorias Individuais</h2>
+        </div>
+        <div class="video-container">
+          <video src="assets/mentoria 01.MP4" controls></video>
+        </div>
+        <div class="video-container">
+          <video src="assets/mentoria 02.MP4" controls></video>
+        </div>
+        <div class="video-container">
+          <video src="assets/mentoria 03.MOV" controls></video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção feedback do treinamento -->
+    <section class="workshop">
+      <div class="grid-container">
+        <div class="text-container">
+          <h2>Treinamentos</h2>
+          <p>
+            Treinamento realizado na <b>Academia BoxGym</b> com foco em
+            capacitar e desenvolver a equipe...
+          </p>
+        </div>
+        <div class="video-container">
+          <video src="assets/treinamentos 02.MOV" controls></video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de mensagem animada -->
+    <section class="quote">
+      <div class="grid-container">
+        <div class="text-container">
+          <span>Você merece <span class="changing-text"></span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de contatos -->
+    <section class="contact">
+      <div class="grid-container">
+        <div class="text-container">
+          <h2>Entre em Contato</h2>
+          <div class="contact-info">
+            <p><strong>Telefone:</strong> +55 (35) 9718-6872</p>
+            <p><strong>Email:</strong> contato@elenflavia.com</p>
+          </div>
+          <a
+            href="https://wa.me/5535997186872"
+            target="_blank"
+            class="whatsapp-btn"
+            >Enviar mensagem no WhatsApp</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Animação do texto -->
+    <script>
+      const words = [
+        "se conhecer",
+        "se capacitar",
+        "se preparar",
+        "se incentivar",
+        "se motivar",
+        "se potencializar",
+        "se valorizar",
+        "se desenvolver",
+        "ser melhor",
+      ];
+
+      let index = 0;
+      const textElement = document.querySelector(".changing-text");
+
+      function changeText() {
+        textElement.innerHTML = words[index];
+        index = (index + 1) % words.length;
+      }
+
+      changeText();
+      setInterval(changeText, 5000);
+    </script>
+  </body>
 </html>
